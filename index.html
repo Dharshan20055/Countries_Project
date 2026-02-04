@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Countries Pagination</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <h1>Countries</h1>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeIcon" class="close-icon">&times;</span>
+
+      <img id="modalFlag" />
+
+      <div class="modal-info">
+        <h2 id="modalName"></h2>
+
+        <p><strong>Capital:</strong> <span id="modalCapital"></span></p>
+        <p><strong>Currency:</strong> <span id="modalCurrency"></span></p>
+        <p><strong>Borders:</strong> <span id="modalBorders"></span></p>
+        <p><strong>Longitude:</strong> <span id="modalLongitude"></span></p>
+
+        <div class="weather-section">
+          <p><strong>Temperature:</strong> <span id="modalTemp">N/A</span></p>
+          <p><strong>Humidity:</strong> <span id="modalHumidity">N/A</span></p>
+          <p><strong>Weather:</strong> <span id="modalWeather">N/A</span></p>
+        </div>
+      </div>
+
+      <button id="closeBtn">Close Details</button>
+    </div>
+  </div>
+
+
+  <input type="text" id="search" placeholder="Search Countries..." />
 
   <div id="countries"></div>
 
@@ -15,4 +45,5 @@
 
   <script src="index.js"></script>
 </body>
+
 </html>
